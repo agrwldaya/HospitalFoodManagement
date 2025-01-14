@@ -9,7 +9,8 @@ export default function LoginPage() {
   const [password, setPassword] = useState('');
   const [role, setRole] = useState('admin');
   const dispatch = useDispatch();
-
+   
+  toast("Please Check the README file on GitHub for login credentials!")
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
