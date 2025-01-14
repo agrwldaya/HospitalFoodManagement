@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { Toaster } from 'react-hot-toast';
+import toast, { Toaster } from 'react-hot-toast';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 
@@ -62,7 +62,8 @@ function App() {
       console.error("Error fetching patients:", error);
     }
   };
-
+   
+  alert("Please Check the README file on GitHub for login credentials!")
   return (
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
