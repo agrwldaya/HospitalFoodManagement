@@ -19,7 +19,10 @@ import staffrouter from './routes/staff.Routes.js';
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+    origin:"https://hospital-food-management-two.vercel.app/"
+}));
+
 app.use(express.json());
 // app.use(helmet());
 // app.use(morgan('dev'));
