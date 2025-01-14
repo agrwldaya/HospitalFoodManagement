@@ -20,7 +20,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-    origin:"https://hospital-food-management-two.vercel.app/"
+    origin:"https://hospital-food-management-two.vercel.app"
 }));
 
 app.use(express.json());
