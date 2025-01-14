@@ -98,7 +98,7 @@ export default function PatientManagement() {
   
 
   try {
-      const response = await axios.post("http://localhost:3000/api/patients/createPatient",formData,{headers:{token}})
+      const response = await axios.post("https://hospitalfoodmanagement.onrender.com/api/patients/createPatient",formData,{headers:{token}})
 
       if(response.data.success){
         console.log(response.data)
@@ -118,7 +118,7 @@ export default function PatientManagement() {
 
   const deletePatient = async(id) => {
     try {
-      const response = await axios.delete(`http://localhost:3000/api/patients/${id}` ,{headers:{token}})
+      const response = await axios.delete(`https://hospitalfoodmanagement.onrender.com/api/patients/${id}` ,{headers:{token}})
 
       if(response.data.success){
         toast.success(response.data.message)

@@ -54,7 +54,7 @@ const StaffManagement: React.FC = () => {
 
   const fetchStaff = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/staff/getall')
+      const response = await axios.get('https://hospitalfoodmanagement.onrender.com/api/staff/getall')
       setStaff(response.data)
     } catch (error) {
       console.error('Error fetching tasks:', error)
@@ -63,7 +63,7 @@ const StaffManagement: React.FC = () => {
 
   const fetchTasks = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/task/getall')
+      const response = await axios.get('https://hospitalfoodmanagement.onrender.com/api/task/getall')
       setTasks(response.data)
     } catch (error) {
       console.error('Error fetching tasks:', error)
@@ -73,7 +73,7 @@ const StaffManagement: React.FC = () => {
   const handleStaffSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     try {
-      const response = await axios.post('http://localhost:3000/api/staff/addstaff', {newStaff}, {headers:{token}})
+      const response = await axios.post('https://hospitalfoodmanagement.onrender.com/api/staff/addstaff', {newStaff}, {headers:{token}})
       if (response.data.success) {
         toast.success(response.data.message)
         fetchStaff()
@@ -98,7 +98,7 @@ const StaffManagement: React.FC = () => {
     e.preventDefault()
     try {
 
-      const response = await axios.post('http://localhost:3000/api/task/create', {newTask}, {headers:{token}})
+      const response = await axios.post('https://hospitalfoodmanagement.onrender.com/api/task/create', {newTask}, {headers:{token}})
       if (response.data.success) {
         toast.success(response.data.message)
         fetchTasks()

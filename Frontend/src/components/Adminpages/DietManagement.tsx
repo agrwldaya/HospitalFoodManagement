@@ -28,7 +28,7 @@ const DietChart: React.FC = () => {
     
     setMeals([...meals, { ...meal, _id: Date.now().toString() }])
       try {
-        const response = await axios.post(`http://localhost:3000/api/diet-charts/add` ,{meal}, {headers:{token}})
+        const response = await axios.post(`https://hospitalfoodmanagement.onrender.com/api/diet-charts/add` ,{meal}, {headers:{token}})
         if(response.data.success){
           toast.success(response.data.message)
         }else{
@@ -44,7 +44,7 @@ const DietChart: React.FC = () => {
     setMeals(meals.map(meal => meal._id === updatedMeal._id ? updatedMeal : meal))
 
     try {
-      const response = await axios.put(`http://localhost:3000/api/diet-charts/${updatedMeal._id}` ,{updateMeal})
+      const response = await axios.put(`https://hospitalfoodmanagement.onrender.com/api/diet-charts/${updatedMeal._id}` ,{updateMeal})
 
       if(response.data.success){
         toast.success(response.data.message)
@@ -59,7 +59,7 @@ const DietChart: React.FC = () => {
   const deleteMeal = async(_id: string) => {
     setMeals(meals.filter(meal => meal._id !== _id))
       try {
-        const response = await axios.delete(`http://localhost:3000/api/diet-charts/${_id}`)
+        const response = await axios.delete(`https://hospitalfoodmanagement.onrender.com/api/diet-charts/${_id}`)
   
         if(response.data.success){
           toast.success(response.data.message)

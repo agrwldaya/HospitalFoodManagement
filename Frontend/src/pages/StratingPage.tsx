@@ -13,7 +13,7 @@ export default function LoginPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:3000/api/auth/login", { email, password, role });
+      const res = await axios.post("https://hospitalfoodmanagement.onrender.com/api/auth/login", { email, password, role });
       if (res.data.success) {
         localStorage.setItem("role", res.data.user.role);
         localStorage.setItem("token", res.data.token);

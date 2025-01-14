@@ -39,7 +39,7 @@ function App() {
 
   const fetchAllPatients = async (token) => {
     try {
-      const res = await axios.get("http://localhost:3000/api/patients/getallpatients", {
+      const res = await axios.get("https://hospitalfoodmanagement.onrender.com/api/patients/getallpatients", {
         headers:{token}, // Proper header format
       });
       if (res.data.success) {
@@ -51,7 +51,7 @@ function App() {
   };
   const fetchAllMeals = async (token) => {
     try {
-      const res = await axios.get("http://localhost:3000/api/diet-charts/allmeal");
+      const res = await axios.get("https://hospitalfoodmanagement.onrender.com/api/diet-charts/allmeal");
       if (res.data.success) {
          
         dispatch(mealSliceActions.addMeal(res.data.meals)); // Use the appropriate action for bulk data

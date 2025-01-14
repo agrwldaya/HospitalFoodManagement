@@ -25,7 +25,7 @@ const DeliveryDashboard: React.FC = () => {
 
   const fetchTasks = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/task/getall', {
+      const response = await axios.get('https://hospitalfoodmanagement.onrender.com/api/task/getall', {
         headers: { token }
       })
       setTasks(response.data.filter((task: Task) => task.taskType === 'delivery'))
