@@ -63,7 +63,7 @@ function App() {
     }
   };
    
-  alert("Please Check the README file on GitHub for login credentials!")
+  
   return (
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>

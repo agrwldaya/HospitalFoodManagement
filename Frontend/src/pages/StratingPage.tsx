@@ -9,7 +9,7 @@ export default function LoginPage() {
   const [password, setPassword] = useState('');
   const [role, setRole] = useState('admin');
   const dispatch = useDispatch();
-   
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -69,6 +69,8 @@ export default function LoginPage() {
           <p className="text-lg text-gray-600">
             Access the Hospital Food Management System to streamline meal planning, kitchen operations, and delivery tracking.
           </p>
+
+          <p className='text-lg text-red-600 mt-5 font-bold'>Please Check the README file on GitHub for login credentials!</p>
         </div>
 
         {/* Login Form */}
