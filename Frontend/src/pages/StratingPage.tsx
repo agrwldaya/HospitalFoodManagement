@@ -70,7 +70,7 @@ export default function LoginPage() {
             Access the Hospital Food Management System to streamline meal planning, kitchen operations, and delivery tracking.
           </p>
 
-          <p className='text-lg text-red-600 mt-5 font-bold'>Please Check the README file on GitHub for login credentials!</p>
+        
         </div>
 
         {/* Login Form */}
@@ -79,6 +79,7 @@ export default function LoginPage() {
             <div className="mb-8 text-center">
               <h2 className="text-3xl font-bold text-gray-800 mb-2">Login</h2>
               <p className="text-gray-600">Access your dashboard</p>
+              <p className='text-lg text-red-600 mt-5 font-bold'>Please Check the README file on GitHub for login credentials! <a className='text-blue-400' href="https://github.com/agrwldaya/HospitalFoodManagement"> Github</a></p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-6">
